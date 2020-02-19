@@ -3,7 +3,9 @@ using Microsoft.Extensions.Configuration;
 using System;
 using System.Collections.Generic;
 using System.Text;
+using TrainWebApp.Data.Repositories;
 using TrainWebApp.Domain;
+using TrainWebApp.Domain.Repositories;
 
 namespace TrainWebApp.DependencyInjection
 {
@@ -29,7 +31,9 @@ namespace TrainWebApp.DependencyInjection
         {
             scope.Configure(c => c.ExportInstance(configuration).As<IConfiguration>());
 
-            //scope.Configure(c => c.Export<Repository>().As<IRepository>());
+            scope.Configure(c => c.Export<StormTrooperRepo>().As<IStormTrooperRepo>());
+            scope.Configure(c => c.Export<FleetRepo>().As<IFleetRepo>());
+            scope.Configure(c => c.Export<VehiclesRepo>().As<IVehiclesRepo>());
         }
 
         public T Get<T>()
