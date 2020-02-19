@@ -1,0 +1,18 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.2</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Grace.DependencyInjection.Extensions" Version="7.0.1" />
+    <PackageReference Include="Microsoft.Extensions.Configuration" Version="2.2.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\TrainWebApp.Core\TrainWebApp.Core.csproj" />
+    <ProjectReference Include="..\TrainWebApp.Data\TrainWebApp.Data.csproj" />
+    <ProjectReference Include="..\TrainWebApp.Domain\TrainWebApp.Domain.csproj" />
+  </ItemGroup>
+
+</Project>

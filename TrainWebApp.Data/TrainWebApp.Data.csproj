@@ -1,0 +1,17 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.2</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\TrainWebApp.Core\TrainWebApp.Core.csproj" />
+    <ProjectReference Include="..\TrainWebApp.Domain\TrainWebApp.Domain.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Services\" />
+    <Folder Include="Repo\" />
+  </ItemGroup>
+
+</Project>
