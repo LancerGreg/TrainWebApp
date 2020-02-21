@@ -19,13 +19,28 @@ namespace TrainWebApp.Data.Repositories
             _appDbContext = appDbContext;
         }
 
-        public async Task<IEnumerable<StormTrooper>> GetUnits() =>
-           await _appDbContext.StormTrooper.ToListAsync();
+        public async Task<IEnumerable<StormTrooper>> GetUnits()
+        {
+            var units = await _appDbContext.StormTrooper.ToListAsync();
+            units.ForEach(u =>
+            {
+                foreach (StormTrooperUnit type in Enum.GetValues(typeof(StormTrooperUnit)))
+                {
+                    if (type.ToString() == ParsType(u.Name))
+                        u.Type = type;
+                }
+            });
+
+            return units;
+        }
 
         public async Task<IOption<StormTrooper>> GetUnitOfName(string Name) =>
-           (await _appDbContext.StormTrooper.SingleOrDefaultAsync(st => st.Id == Name)).AsOption();
+           (await _appDbContext.StormTrooper.SingleOrDefaultAsync(st => st.Name == Name)).AsOption();
 
         public async Task<IOption<StormTrooper>> GetUnitOfType(string Type) =>
            (await _appDbContext.StormTrooper.SingleOrDefaultAsync(st => st.Type.ToString() == Type)).AsOption();
+
+        private string ParsType(string name) =>
+            name.Replace(' ', '_');
     }
 }

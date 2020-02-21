@@ -10,4 +10,18 @@ namespace TrainWebApp.Core.ExceptionError
         {
         }
     }
+
+    public class UnitIdNotFound : ExceptionTermFailure
+    {
+        public UnitIdNotFound() : base(ExceptionTerm.UnitIdNotFound)
+        {
+        }
+    }
+
+    public class EmptyList : ExceptionTermFailure
+    {
+        public EmptyList() : base(ExceptionTerm.EmptyList)
+        {
+        }
+    }
 }

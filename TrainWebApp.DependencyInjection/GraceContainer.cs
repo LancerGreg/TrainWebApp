@@ -4,8 +4,10 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 using TrainWebApp.Data.Repositories;
+using TrainWebApp.Data.Services;
 using TrainWebApp.Domain;
 using TrainWebApp.Domain.Repositories;
+using TrainWebApp.Domain.Services;
 
 namespace TrainWebApp.DependencyInjection
 {
@@ -34,6 +36,8 @@ namespace TrainWebApp.DependencyInjection
             scope.Configure(c => c.Export<StormTrooperRepo>().As<IStormTrooperRepo>());
             scope.Configure(c => c.Export<FleetRepo>().As<IFleetRepo>());
             scope.Configure(c => c.Export<VehiclesRepo>().As<IVehiclesRepo>());
+
+            scope.Configure(c => c.Export<DetachmentSelectStormTrooperService>().As<IDetachmentSelectStormTrooperService>());
         }
 
         public T Get<T>()

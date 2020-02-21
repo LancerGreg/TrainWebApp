@@ -6,6 +6,8 @@ namespace TrainWebApp.Core.ExceptionError
 {
     public enum ExceptionTerm
     {
-        UserNotFoundFailure
+        UserNotFoundFailure,
+        UnitIdNotFound,
+        EmptyList
     }
 }

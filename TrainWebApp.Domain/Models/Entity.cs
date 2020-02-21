@@ -5,6 +5,6 @@ namespace TrainWebApp.Domain.Models
     [DataContract]
     public abstract class Entity
     {
-        [DataMember(Name = "id")] public string Id { get; set; }
+        [DataMember(Name = "id")] public int Id { get; set; }
     }
 }

@@ -3,15 +3,17 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.29609.76
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TrainWebApp.API", "TrainWebApp.API\TrainWebApp.API.csproj", "{EEE08CD8-0A15-4A16-86A5-BE7D81D1A520}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TrainWebApp.API", "TrainWebApp.API\TrainWebApp.API.csproj", "{EEE08CD8-0A15-4A16-86A5-BE7D81D1A520}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TrainWebApp.Core", "TrainWebApp.Core\TrainWebApp.Core.csproj", "{1F43945A-E3F0-4F52-A4C3-465097F215A1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TrainWebApp.Core", "TrainWebApp.Core\TrainWebApp.Core.csproj", "{1F43945A-E3F0-4F52-A4C3-465097F215A1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TrainWebApp.Data", "TrainWebApp.Data\TrainWebApp.Data.csproj", "{4BB36281-33B6-461D-9DB7-CEA5E252C0F2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TrainWebApp.Data", "TrainWebApp.Data\TrainWebApp.Data.csproj", "{4BB36281-33B6-461D-9DB7-CEA5E252C0F2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TrainWebApp.DependencyInjection", "TrainWebApp.DependencyInjection\TrainWebApp.DependencyInjection.csproj", "{46DCCE2A-EDF1-40CE-9F32-9178CD2700B6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TrainWebApp.DependencyInjection", "TrainWebApp.DependencyInjection\TrainWebApp.DependencyInjection.csproj", "{46DCCE2A-EDF1-40CE-9F32-9178CD2700B6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TrainWebApp.Domain", "TrainWebApp.Domain\TrainWebApp.Domain.csproj", "{0408639E-6A07-4283-8F6A-1CFB2FA72B0B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TrainWebApp.Domain", "TrainWebApp.Domain\TrainWebApp.Domain.csproj", "{0408639E-6A07-4283-8F6A-1CFB2FA72B0B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TrainWebApp.Test", "TrainWebApp.Test\TrainWebApp.Test.csproj", "{AC64FB35-1B5A-4089-BCF6-EA852A1F8813}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -39,6 +41,10 @@ Global
 		{0408639E-6A07-4283-8F6A-1CFB2FA72B0B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0408639E-6A07-4283-8F6A-1CFB2FA72B0B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0408639E-6A07-4283-8F6A-1CFB2FA72B0B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AC64FB35-1B5A-4089-BCF6-EA852A1F8813}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AC64FB35-1B5A-4089-BCF6-EA852A1F8813}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AC64FB35-1B5A-4089-BCF6-EA852A1F8813}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AC64FB35-1B5A-4089-BCF6-EA852A1F8813}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

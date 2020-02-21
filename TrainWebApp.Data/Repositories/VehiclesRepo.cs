@@ -22,7 +22,7 @@ namespace TrainWebApp.Data.Repositories
            await _appDbContext.Vehicles.ToListAsync();
 
         public async Task<IOption<Vehicles>> GetUnitOfName(string Name) =>
-           (await _appDbContext.Vehicles.SingleOrDefaultAsync(st => st.Id == Name)).AsOption();
+           (await _appDbContext.Vehicles.SingleOrDefaultAsync(st => st.Name == Name)).AsOption();
 
         public async Task<IOption<Vehicles>> GetUnitOfType(string Type) =>
            (await _appDbContext.Vehicles.SingleOrDefaultAsync(st => st.Type.ToString() == Type)).AsOption();
